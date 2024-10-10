@@ -17,7 +17,7 @@ const Dishes = () => {
      },
      {
         id:3,
-        image:"src/assets/photo1.jpg",
+        image:"https://goldenplaterestaurant.net/wp-content/uploads/2023/09/photo_2023-09-21_09-45-50-1.jpg",
         text:"Stir fried chicken pasta",
         p:"Adipiscing elit eiusmod tempor incididunt"
      },
