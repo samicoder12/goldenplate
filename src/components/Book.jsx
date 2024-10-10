@@ -98,7 +98,7 @@ const Book = () => {
             </motion.div>
            </form>
         </div>
-        <div className="">
+        <div className="px-1 xl:px-0 md:px-4 ">
             <Slider {...setting} >
              {
                 Slide.map((slide) =>(

@@ -94,7 +94,7 @@ const Staff = () => {
            <motion.h1 viewport={{once: true}} initial={{opacity:0, y:50}} whileInView={{opacity:1, y:0}} transition={{duration:1, ease:"easeInOut" , y:{type:"spring", stiffness:60 }, delay:0.35}}
            className="text-xl font-bold text-white text-center text-balance">Where taste meets excellence service.</motion.h1>
       </div>
-      <div className="container pt-32">
+      <div className="container pt-32 px-2 md:px-4 xl:px-0">
       <Slider {...settings}>
       {
         MenuItems.map((menu) => (
