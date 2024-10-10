@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { motion } from 'framer-motion'
 const FoodLists = () => {
     const MenuFoodList = [
         {
@@ -114,20 +114,20 @@ const FoodLists = () => {
       <div className="w-full h-[7460px]  md:h-[4040px] lg:h-[2640px] bg-[rgb(30,30,30)] ">
                 <div className="container">
                 <div className="flex flex-col pt-16 ">
-                    <h1 className="text-yellow text-2xl font-semibold text-center">Food Menu</h1>
-                    <h2 className="text-4xl font-semibold text-white py-6 text-center">Discover Our Menu</h2>
+                    <motion.h1  viewport={{once: true}} initial={{opacity:0, y:50}} whileInView={{opacity:1, y:0}} transition={{duration:1, ease:"easeInOut" , y:{type:"spring", stiffness:60 }, delay:0.35}} className="text-yellow text-2xl font-semibold text-center">Food Menu</motion.h1>
+                    < motion.h2 className="text-4xl font-semibold text-white py-6 text-center">Discover Our Menu</ motion.h2>
                     <div className="container">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
+                        <div   className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
                               {
                                 MenuFoodList.map((menu) => (
-                                    <div key={menu.id} className="hover:bg-[rgb(36,36,36)] duration-300 w-[300px] h-[450px] bg-green rounded-2xl flex flex-col py-16 items-center">
+                                    <motion.div viewport={{once: true}} initial={{opacity:0, y:50}} whileInView={{opacity:1, y:0}} transition={{duration:1, ease:"easeInOut" , y:{type:"spring", stiffness:60 }, delay: menu.id * 0.35}} key={menu.id} className="hover:bg-[rgb(36,36,36)] duration-300 w-[300px] h-[450px] bg-green rounded-2xl flex flex-col py-16 items-center">
                                         <div className=" flex flex-col items-center space-y-4">
                                            <img className='w-40 h-40 rounded-full border border-[rgb(149,149,149)] object-cover bg-[rgb(29,32,36)] p-2' src={menu.image} alt="foodimage" />
                                            <h1 className="text-xl text-yellow/90 font-semibold text-center">{menu.h1}</h1>
                                            <h2 className="text-sm px-2 font-medium text-balance text-center line-clamp-2 text-white">{menu.p}</h2>
                                            <span className="px-8 py-2 border-b-2 border-[rgb(235,0,41)] text-white rounded-3xl">{menu.span}</span>
                                        </div>
-                                    </div>
+                                    </motion.div>
                                 ))
                               }
                         </div>
