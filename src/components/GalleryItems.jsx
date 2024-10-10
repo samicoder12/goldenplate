@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 const GalleryItems = () => {
   return (
-    <div className='w-ful h-[3450px] md:h-[1150px] lg:h-[1500px] xl:h-[1800px]'>
+    <div className='w-ful h-[4370px] md:h-[1150px] lg:h-[1500px] xl:h-[1800px]'>
       <div className="container">
       <div viewport={{once: true}} initial={{opacity:0, y:50}} whileInView={{opacity:1, y:0}} transition={{duration:1, ease:"easeInOut" , y:{type:"spring", stiffness:60 }, delay: 0.35}} className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4 px-2 md:px-0 pt-14 md:pt-24">
 
